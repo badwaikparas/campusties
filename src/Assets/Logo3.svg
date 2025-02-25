@@ -1,0 +1,18 @@
+<svg width="239" height="239" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_2)">
+<rect width="239" height="239" fill="white"/>
+<path d="M67 13.033L120.033 -40L173.066 13.033L120.033 66.066L67 13.033Z" fill="#24B6FF"/>
+<rect x="14" y="66.033" width="75" height="75" transform="rotate(-45 14 66.033)" fill="#2082FF"/>
+<rect x="14" y="172.033" width="75" height="75" transform="rotate(-45 14 172.033)" fill="#2082FF"/>
+<rect x="67" y="225.033" width="75" height="75" transform="rotate(-45 67 225.033)" fill="#24B6FF"/>
+<path d="M120 172.033L146.517 145.517C161.161 130.872 184.905 130.872 199.55 145.517L226.066 172.033L173.033 225.066L120 172.033Z" fill="#25ECFF"/>
+<path d="M120 66.033L173.033 13L226.066 66.033L199.55 92.5495C184.905 107.194 161.161 107.194 146.517 92.5495L120 66.033Z" fill="#25ECFF"/>
+<rect x="-39" y="119.033" width="75" height="75" transform="rotate(-45 -39 119.033)" fill="#1D4EFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M290 -61H-60V289H290V-61ZM120 231C181.856 231 232 180.856 232 119C232 57.1441 181.856 7 120 7C58.1441 7 8 57.1441 8 119C8 180.856 58.1441 231 120 231Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_1_2">
+<rect width="239" height="239" fill="white"/>
+</clipPath>
+</defs>
+</svg>

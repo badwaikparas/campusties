@@ -11,11 +11,13 @@ export default function LoginComponent() {
     const login = async () => {
         let res = await LoginAPI(credentials.email, credentials.password)
         console.log(res);
+        localStorage.setItem('userEmail', res.email)
         navigate('/home')
     }
     const googleSignIn = async () => {
         let res = await GoogleSignInAPI()
         console.log(res);
+        localStorage.setItem('userEmail', res.email)
         navigate('/home')
     }
     return (

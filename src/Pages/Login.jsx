@@ -12,6 +12,8 @@ export default function Login() {
             if (res?.accessToken) {
                 setCanAccess(true)
                 // console.log(res.accessToken);
+                console.log(res.email);
+                localStorage.setItem('userEmail', res.email)
                 setTimeout(() => {
                     navigate('/home')
                 }, 5000)

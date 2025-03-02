@@ -10,6 +10,7 @@ export default function SignUp() {
         onAuthStateChanged(auth, res => {
             if (res?.accessToken) {
                 setCanAccess(true)
+                localStorage.setItem('userEmail', res.email)
                 setTimeout(() => {
                     navigate('/home')
                 }, 5000)

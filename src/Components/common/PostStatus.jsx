@@ -1,11 +1,11 @@
 import React, { useState, useMemo } from 'react'
 import ModalComponent from './ModalComponent'
 import { PostStatusFunction, GetPostsFunction } from '../../API/FireStoreAPI';
+import PostCard from './PostCard';
 export default function PostStatus() {
     const [modalOpen, setModalOpen] = useState(false);
     const [allPosts, setAllPosts] = useState([])
     const sendStatus = async (status) => {
-        console.log("Post Sent");
         await PostStatusFunction(status)
         setModalOpen(false)
     }
@@ -31,9 +31,7 @@ export default function PostStatus() {
             {/* LODING ALL THE POSTS */}
             {allPosts.map((post) => {
                 return (
-                    <>
-                        <p>{post.status}</p>
-                    </>
+                    <PostCard post={post} key={post.id} />
                 )
             })}
         </div>

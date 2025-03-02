@@ -1,15 +1,20 @@
 import { firestore } from "../firebaseConfig.js"
 import { addDoc, collection, onSnapshot } from "firebase/firestore"
-
+import { getCurrentTimeStamp } from '../Helpers/useMoment';
 
 let dbRef = collection(firestore, "posts")
 
 export const PostStatusFunction = (status) => {
     let object = {
-        status: status
+        status: status,
+        timeStamp: getCurrentTimeStamp('LLL'),
+        userEmail: localStorage.getItem('userEmail')
     }
+    // console.log(getCurrentTimeStamp('LLL'));
+
     addDoc(dbRef, object)
         .then((res) => {
+            // console.log(JSON.stringify(object));
             console.log("Document has been added Successfully")
         })
         .catch((error) => {

@@ -11,12 +11,18 @@ const ModalComponent = ({ modalOpen, setModalOpen, sendStatus }) => {
                 onOk={() => setModalOpen(false)}
                 onCancel={() => setModalOpen(false)}
                 footer={[
-                    <Button key="submit" type="primary" disabled={!postMessage} onClick={sendStatus}>
+                    <Button key="submit" type="primary" disabled={!postMessage}
+                        onClick={async () => {
+                            await sendStatus(postMessage)
+                            setPostMessage("")
+                            setModalOpen(false)
+                        }}>
                         Post
                     </Button>,
                 ]}
             >
-                <input type="text" placeholder='What do you want to talk about?' className='border-0 bg-white outline-none text-black text-[16px] w-full' onChange={(e) => setPostMessage(e.target.value)} />
+                <input type="text" placeholder='What do you want to talk about?' className='border-0 bg-white outline-none text-black text-[16px] w-full'
+                    value={postMessage} onChange={(e) => setPostMessage(e.target.value)} />
             </Modal>
         </>
     );

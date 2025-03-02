@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import ModalComponent from './ModalComponent'
+import { PostStatusFunction } from '../../API/FireStoreAPI';
 export default function PostStatus() {
     const [modalOpen, setModalOpen] = useState(false);
-    const sendStatus = () => {
+    const sendStatus = (status) => {
         console.log("Post Sent");
-
+        PostStatusFunction(status)
     }
     return (
         <div className='flex justify-center items-center'>

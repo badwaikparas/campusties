@@ -7,7 +7,6 @@ import chatIcon from '../../Assets/NavbarIcons/message-square.svg'
 import notificationIcon from '../../Assets/NavbarIcons/bell.svg'
 import searchIcon from '../../Assets/NavbarIcons/search.svg'
 import progressIcon from '../../Assets/NavbarIcons/progress.svg'
-import profilePic from '../../Assets/ProfilePic/DSCN1525.JPG'
 import { useNavigate } from 'react-router-dom'
 
 export default function Navbar() {
@@ -53,7 +52,7 @@ export default function Navbar() {
 
             {/* PROFILE PIC */}
 
-            <div className='flex gap-4 items-center w-100'>
+            {/* <div className='flex gap-4 items-center w-100'>
                 <img src={profilePic} alt="" className='w-13 rounded-full' />
                 <div className=''>
                     <p className='w-auto font-bold'>Paras Badwaik</p>
@@ -63,7 +62,7 @@ export default function Navbar() {
                         <img src={progressIcon} alt="" />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
         </div>

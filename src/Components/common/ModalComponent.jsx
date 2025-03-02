@@ -15,7 +15,6 @@ const ModalComponent = ({ modalOpen, setModalOpen, sendStatus }) => {
                         onClick={async () => {
                             await sendStatus(postMessage)
                             setPostMessage("")
-                            setModalOpen(false)
                         }}>
                         Post
                     </Button>,

@@ -1,5 +1,5 @@
 import { firestore } from "../firebaseConfig.js"
-import { addDoc, collection } from "firebase/firestore"
+import { addDoc, collection, onSnapshot } from "firebase/firestore"
 
 
 let dbRef = collection(firestore, "posts")
@@ -17,3 +17,11 @@ export const PostStatusFunction = (status) => {
 
         })
 }
+
+export const GetPostsFunction = (setAllPosts) => {
+    onSnapshot(dbRef, (response) => {
+        setAllPosts(response.docs.map((docs) => {
+            return { ...docs.data(), id: docs.id }
+        }))
+    })
+} 

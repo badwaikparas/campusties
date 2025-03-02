@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 import ModalComponent from './ModalComponent'
 export default function PostStatus() {
     const [modalOpen, setModalOpen] = useState(false);
+    const sendStatus = () => {
+        console.log("Post Sent");
+
+    }
     return (
         <div className='flex justify-center items-center'>
             <div className='w-[80%] h-[120px] bg-slate-100 mt-[30px] rounded-4xl flex justify-center items-center'>
@@ -14,7 +18,7 @@ export default function PostStatus() {
                 >Start a Post</button>
             </div>
 
-            <ModalComponent modalOpen={modalOpen} setModalOpen={setModalOpen} />
+            <ModalComponent modalOpen={modalOpen} setModalOpen={setModalOpen} sendStatus={sendStatus} />
         </div>
     )
 }

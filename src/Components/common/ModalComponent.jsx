@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Modal } from 'antd';
-const ModalComponent = ({ modalOpen, setModalOpen }) => {
+import { Button, Modal } from 'antd';
+const ModalComponent = ({ modalOpen, setModalOpen, sendStatus }) => {
+    const [postMessage, setPostMessage] = useState("")
     return (
         <>
             <Modal
@@ -9,8 +10,13 @@ const ModalComponent = ({ modalOpen, setModalOpen }) => {
                 open={modalOpen}
                 onOk={() => setModalOpen(false)}
                 onCancel={() => setModalOpen(false)}
+                footer={[
+                    <Button key="submit" type="primary" disabled={!postMessage} onClick={sendStatus}>
+                        Post
+                    </Button>,
+                ]}
             >
-                <input type="text" placeholder='What do you want to talk about?' />
+                <input type="text" placeholder='What do you want to talk about?' className='border-0 bg-white outline-none text-black text-[16px] w-full' onChange={(e) => setPostMessage(e.target.value)} />
             </Modal>
         </>
     );

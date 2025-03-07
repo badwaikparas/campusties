@@ -16,8 +16,8 @@ export default function SignUp() {
                 }, 5000)
             } else {
                 setCanAccess(false)
-                console.log(res?.accessToken);
-                alert('Please Login to continue')
+                // console.log(res?.accessToken);
+                // alert('Please Login to continue')
             }
         })
     })

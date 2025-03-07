@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import campustiesLogo from '../../Assets/Logos/Logo3.svg'
 import feedIcon from '../../Assets/NavbarIcons/rss.svg'
 import networkIcon from '../../Assets/NavbarIcons/users.svg'
@@ -10,7 +10,11 @@ import progressIcon from '../../Assets/NavbarIcons/progress.svg'
 import profilePic from '../../Assets/ProfilePic/DSCN1525.JPG'
 import { useNavigate } from 'react-router-dom'
 
+import ProfilePopUp from './ProfilePopUp'
+
 export default function Navbar() {
+    const [isPopUpopen, setIsPopUpOpen] = useState(false);
+
     const navigate = useNavigate()
     const gotoRoute = (route) => {
         navigate(route)
@@ -22,7 +26,7 @@ export default function Navbar() {
 
             {/* NAVBAR ICONS */}
             <div className='w-full flex items-center'>
-                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/feed')} >
+                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/home')} >
                     <img src={feedIcon} alt="" />
                     <p className='text-sm'>FEED</p>
                 </div>
@@ -51,18 +55,34 @@ export default function Navbar() {
                 <input placeholder='Search' type="text" className='p-4 pl-11 focus:border-2 border-gray-500 rounded-3xl' />
             </div>
 
-            {/* PROFILE PIC */}
 
-            <div className='flex gap-4 items-center w-100'>
-                <img src={profilePic} alt="" className='w-13 rounded-full' />
-                <div className=''>
-                    <p className='w-auto font-bold'>Paras Badwaik</p>
-                    <div className='flex'>
-                        <p>50367 views today </p>
-                        <p className='text-green-400'>+32</p>
-                        <img src={progressIcon} alt="" />
+            <div className='relative'>
+                {/* PROFILE PIC */}
+
+                <div className='flex gap-4 items-center w-100'
+                    onClick={() => {
+                        if (!isPopUpopen) {
+                            setIsPopUpOpen(c => !c)
+                            console.log(isPopUpopen);
+                        }
+
+
+                    }}>
+                    <img src={profilePic} alt="" className='w-13 rounded-full' />
+                    <div className=''>
+                        <p className='w-auto font-bold'>Paras Badwaik</p>
+                        <div className='flex'>
+                            <p>50367 views today </p>
+                            <p className='text-green-400'>+32</p>
+                            <img src={progressIcon} alt="" />
+                        </div>
                     </div>
                 </div>
+
+                {/* PROFILE POP UP */}
+                {isPopUpopen &&
+                    <ProfilePopUp closeFunc={() => { setIsPopUpOpen(false) }} />
+                }
             </div>
 
 

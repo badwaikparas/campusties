@@ -30,7 +30,7 @@ export const GoogleSignInAPI = () => {
     }
 }
 
-export const onLogout = () => {
+export const OnLogout = () => {
     try {
         signOut(auth)
     } catch (error) {

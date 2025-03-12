@@ -9,13 +9,13 @@ import Network from './Pages/Network'
 function App() {
     return (
         <Router>
-            <div className='h-screen w-screen overflow-hidden '>
+            <div className='h-screen w-screen overflow-auto'>
                 <Routes>
                     <Route path="/" element={<Login />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<SignUp />} />
                     <Route path="/home" element={<HomeLayout />} />
-                    <Route path="/home/network" element={<Network />} />
+                    <Route path="/network/*" element={<Network />} />
                 </Routes>
             </div>
         </Router>

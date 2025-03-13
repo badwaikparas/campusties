@@ -16,7 +16,7 @@ const ConnectionCard = ({ name, role, message, connections, image, isNew , isAcc
         <div className='flex gap-2'>
 
           <button className='bg-blue-500 text-white px-6 py-2 rounded shadow-md hover:bg-blue-700 transition'>Accept</button>
-          <button variant='outline '>Decline</button>
+          <button variant='outline ' className='hover:scale-105'>Decline</button>
         </div>
       ):
       (
@@ -94,15 +94,15 @@ export const NetworkNavigator = () => {
     <div className="text-black w-56 h-40 bg-white ml-64 ">
       <div
         className={`border-gray-200 border-b p-2 cursor-pointer ${
-          activeSection === "connections" ? "bg-gray-300 " : ""
-        }`}
+          activeSection === "connections" ? "bg-gray-300 " : "hover:bg-gray-100"
+        } ` }
         onClick={() => handleNavigation("connections", "/network/connections")}
       >
         Connections
       </div>
       <div
         className={`border-gray-200 border-b p-2 cursor-pointer ${
-          activeSection === "invitations" ? "bg-gray-300 " : ""
+          activeSection === "invitations" ? "bg-gray-300 " : "hover:bg-gray-100"
         }`}
         onClick={() => handleNavigation("invitations", "/network/invitations")}
       >
@@ -110,16 +110,16 @@ export const NetworkNavigator = () => {
       </div>
       <div
         className={`border-gray-200 border-b p-2 cursor-pointer ${
-          activeSection === "groups" ? "bg-gray-300 " : ""
-        }`}
+          activeSection === "groups" ? "bg-gray-300 " : "hover:bg-gray-100"
+        } `}
         onClick={() => handleNavigation("groups", "/network/groups")}
       >
         Groups
       </div>
       <div
         className={`border-gray-200 border-b p-2 cursor-pointer ${
-          activeSection === "pages" ? "bg-gray-300 " : ""
-        }`}
+          activeSection === "pages" ? "bg-gray-300 " : "hover:bg-gray-100"
+        } `}
         onClick={() => handleNavigation("pages", "/network/pages")}
       >
         Pages

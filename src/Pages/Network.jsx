@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../Components/common/Navbar'
-import { NetworkMain, NetworkNavigator, NetworkUI } from '../Components/NetworkComponent'
-import { Route, Router, Routes } from 'react-router-dom'
+import { NetworkNavigator, NetworkUI } from '../Components/NetworkComponent'
+import { Route, Routes } from 'react-router-dom'
 // import NetworkNavigator from '../Components/NetworkComponent'
 
 const Network = () => {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
-const ConnectionCard = ({ name, role, message, connections, image, isNew , isAccepted}) => {
+const ConnectionCard = ({ name, role, message, connections, image, isNew, isAccepted }) => {
   return (
     <div className='flex items-start gap-4 bg-white p-4 rounded-lg shadow-md mb-4'>
       <img src={image} alt={name} className='w-12 h-12 rounded-full' />
@@ -18,60 +18,60 @@ const ConnectionCard = ({ name, role, message, connections, image, isNew , isAcc
           <button className='bg-blue-500 text-white px-6 py-2 rounded shadow-md hover:bg-blue-700 transition'>Accept</button>
           <button variant='outline ' className='hover:scale-105'>Decline</button>
         </div>
-      ):
-      (
-        isAccepted !== undefined && ( // Only show if isAccepted is provided
-          isAccepted ? (
-            <p className='text-sm text-gray-700 mt-2'>Accepted</p>
-          ) : (
-            <p className='text-sm text-gray-700 mt-2'>Declined</p>
+      ) :
+        (
+          isAccepted !== undefined && ( // Only show if isAccepted is provided
+            isAccepted ? (
+              <p className='text-sm text-gray-700 mt-2'>Accepted</p>
+            ) : (
+              <p className='text-sm text-gray-700 mt-2'>Declined</p>
+            )
           )
         )
-      )
       }
     </div>
   )
 }
 
-const RecievedTab = () =>{
-  
-  return(
+const RecievedTab = () => {
+
+  return (
     <div >
-        
 
-        <h3 className='text-center text-gray-600 mb-4'>You have <span className='text-blue-500'>2 New Connections</span></h3>
 
-        <ConnectionCard
-          name='Brandon Wilson'
-          role='Senior UX Designer'
-          message="Hey, I saw your works. I like it! Can we do something together?"
-          connections='623'
-          image="https://i.pravatar.cc/300?img=11"
-          isNew={true}
-        />
-        <ConnectionCard
-          name='Theresa Steward'
-          role='iOS Developer'
-          connections='481'
-          image="https://i.pravatar.cc/300?img=5"
-          isNew={true}
-        />
+      <h3 className='text-center text-gray-600 mb-4'>You have <span className='text-blue-500'>2 New Connections</span></h3>
 
-        <h3 className='text-center text-gray-600 my-6'>Recent Connections</h3>
-        <div className='grid grid-cols-2 gap-4'>
-          <ConnectionCard name='Audrey Alexander' role='Team Lead at Google' image='https://i.pravatar.cc/300?img=6' />
-          <ConnectionCard name='Kyle Fisher' role='Product Designer at Commander Corp' image='https://i.pravatar.cc/300?img=1' />
-          <ConnectionCard name='Darlene Black' role='HR Manager, 10,000 connections' image='https://i.pravatar.cc/300?img=2' />
-          <ConnectionCard name='Eduardo Russell' role='Full Stack Developer at Yandex' image='https://i.pravatar.cc/300?img=3' />
-        </div>
+      <ConnectionCard
+        name='Brandon Wilson'
+        role='Senior UX Designer'
+        message="Hey, I saw your works. I like it! Can we do something together?"
+        connections='623'
+        image="https://i.pravatar.cc/300?img=11"
+        isNew={true}
+      />
+      <ConnectionCard
+        name='Theresa Steward'
+        role='iOS Developer'
+        connections='481'
+        image="https://i.pravatar.cc/300?img=5"
+        isNew={true}
+      />
+
+      <h3 className='text-center text-gray-600 my-6'>Recent Connections</h3>
+      <div className='grid grid-cols-2 gap-4'>
+        <ConnectionCard name='Audrey Alexander' role='Team Lead at Google' image='https://i.pravatar.cc/300?img=6' />
+        <ConnectionCard name='Kyle Fisher' role='Product Designer at Commander Corp' image='https://i.pravatar.cc/300?img=1' />
+        <ConnectionCard name='Darlene Black' role='HR Manager, 10,000 connections' image='https://i.pravatar.cc/300?img=2' />
+        <ConnectionCard name='Eduardo Russell' role='Full Stack Developer at Yandex' image='https://i.pravatar.cc/300?img=3' />
+      </div>
     </div>
   )
 }
-const SentTab = ()=>{
-    return <div > 
-              <ConnectionCard name='Audrey Alexander' role='Team Lead at Google' image='https://i.pravatar.cc/300?img=7' isAccepted={true} />
-              <ConnectionCard name='Eduardo Russell' role='Full Stack Developer at Yandex' image='https://i.pravatar.cc/300?img=9' isAccepted={false} />
-           </div>
+const SentTab = () => {
+  return <div >
+    <ConnectionCard name='Audrey Alexander' role='Team Lead at Google' image='https://i.pravatar.cc/300?img=7' isAccepted={true} />
+    <ConnectionCard name='Eduardo Russell' role='Full Stack Developer at Yandex' image='https://i.pravatar.cc/300?img=9' isAccepted={false} />
+  </div>
 }
 
 
@@ -93,33 +93,29 @@ export const NetworkNavigator = () => {
   return (
     <div className="text-black w-56 h-40 bg-white ml-64 ">
       <div
-        className={`border-gray-200 border-b p-2 cursor-pointer ${
-          activeSection === "connections" ? "bg-gray-300 " : "hover:bg-gray-100"
-        } ` }
+        className={`border-gray-200 border-b p-2 cursor-pointer ${activeSection === "connections" ? "bg-gray-300 " : "hover:bg-gray-100"
+          } `}
         onClick={() => handleNavigation("connections", "/network/connections")}
       >
         Connections
       </div>
       <div
-        className={`border-gray-200 border-b p-2 cursor-pointer ${
-          activeSection === "invitations" ? "bg-gray-300 " : "hover:bg-gray-100"
-        }`}
+        className={`border-gray-200 border-b p-2 cursor-pointer ${activeSection === "invitations" ? "bg-gray-300 " : "hover:bg-gray-100"
+          }`}
         onClick={() => handleNavigation("invitations", "/network/invitations")}
       >
         Invitations
       </div>
       <div
-        className={`border-gray-200 border-b p-2 cursor-pointer ${
-          activeSection === "groups" ? "bg-gray-300 " : "hover:bg-gray-100"
-        } `}
+        className={`border-gray-200 border-b p-2 cursor-pointer ${activeSection === "groups" ? "bg-gray-300 " : "hover:bg-gray-100"
+          } `}
         onClick={() => handleNavigation("groups", "/network/groups")}
       >
         Groups
       </div>
       <div
-        className={`border-gray-200 border-b p-2 cursor-pointer ${
-          activeSection === "pages" ? "bg-gray-300 " : "hover:bg-gray-100"
-        } `}
+        className={`border-gray-200 border-b p-2 cursor-pointer ${activeSection === "pages" ? "bg-gray-300 " : "hover:bg-gray-100"
+          } `}
         onClick={() => handleNavigation("pages", "/network/pages")}
       >
         Pages
@@ -131,34 +127,58 @@ export const NetworkNavigator = () => {
 export const NetworkUI = () => {
   const [activeTab, setActiveTab] = useState("received");
   return (
-    <div className='bg-gray-100  p-5 overflow-auto w-[55%]'>
+    <div className='bg-gray-100  p-5 overflow-auto max-h-[77vh] w-[55%]'>
       <div className='flex gap-4 mb-6'>
-          <button
-            onClick={() => setActiveTab("received")}
-            className={`px-6 py-2 rounded shadow-md transition ${activeTab === "received"
-                ? "bg-green-500 text-white hover:bg-green-700"
-                : "  text-gray-500 bg-white hover:bg-green-500 hover:text-white"
-              }`}
-          >
-            Received
-          </button>
-          <button
-            onClick={() => setActiveTab("sent")}
-            className={`px-6 py-2 rounded shadow-md transition ${activeTab === "sent"
-                ? "bg-green-500 text-white hover:bg-green-700"
-                : " text-gray-500 bg-white hover:bg-green-500 hover:text-white"
-              }`}
-          >
-            Sent
-          </button>
+        <button
+          onClick={() => setActiveTab("received")}
+          className={`px-6 py-2 rounded shadow-md transition ${activeTab === "received"
+            ? "bg-green-500 text-white hover:bg-green-700"
+            : "  text-gray-500 bg-white hover:bg-green-500 hover:text-white"
+            }`}
+        >
+          Received
+        </button>
+        <button
+          onClick={() => setActiveTab("sent")}
+          className={`px-6 py-2 rounded shadow-md transition ${activeTab === "sent"
+            ? "bg-green-500 text-white hover:bg-green-700"
+            : " text-gray-500 bg-white hover:bg-green-500 hover:text-white"
+            }`}
+        >
+          Sent
+        </button>
       </div>
       {
-        activeTab === "received"? <RecievedTab />:<SentTab />
+        activeTab === "received" ? <RecievedTab /> : <SentTab />
       }
-      
+
     </div>
   )
 }
+
+export const ConnectionTab = () => {
+
+  const navigate = useNavigate();
+
+  return (
+  <div className='bg-gray-100  p-5 overflow-auto max-h-[77vh] w-[55%]'>
+    <div className='cursor-pointer' onClick={() => { navigate(`/network/profile/${name}`) }}>
+
+      <ConnectionCard
+        name='Brandon Wilson'
+        role='Senior UX Designer'
+        message="Hey, I saw your works. I like it! Can we do something together?"
+        connections='623'
+        image="https://i.pravatar.cc/300?img=11"
+        isNew={false} />
+    </div>
+  </div>
+  )
+
+}
+
+
+
 
 export const NetworkMain = () => {
   return (

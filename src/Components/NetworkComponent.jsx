@@ -10,7 +10,7 @@ const ConnectionCard = ({ name, role, message, connections, image, isNew, isAcce
         <h4 className='font-semibold'>{name}</h4>
         <p className='text-sm text-gray-500'>{role}</p>
         {connections && <p className='text-blue-500 text-sm'>{connections} connections</p>}
-        {isNew && <p className='text-sm text-gray-700 mt-2'>{message}</p>}
+         <p className='text-sm text-gray-700 mt-2'>{message}</p>
       </div>
       {isNew ? (
         <div className='flex gap-2'>
@@ -74,7 +74,34 @@ const SentTab = () => {
   </div>
 }
 
-
+export const GroupTab = () => {
+  const navigate = useNavigate()
+  return (
+    <div className='bg-gray-100  p-5 overflow-auto max-h-[77vh] w-[55%]'>
+      <div className='cursor-pointer ' onClick={() => { navigate(`/network/groups/${name}`) }}>
+  
+        <ConnectionCard
+          name='CSE 3rd Year'
+          message="Group For CSE batch 3rd year for mentorship and sessios from alumnis"
+          connections='623'
+          image="https://avatar.iran.liara.run/username?username=CSE 3rd Year"
+           />
+           <ConnectionCard
+          name='Drone Project'
+          message="Group For making Drones with Rajesh Sir"
+          connections='46'
+          image="https://avatar.iran.liara.run/username?username=Drone Project"
+           />
+           <ConnectionCard
+          name='Mech Last'
+          message="Group For Mechanical branch final Year"
+          connections='300'
+          image="https://avatar.iran.liara.run/username?username=Mech Last"
+           />
+      </div>
+    </div>
+    )
+}
 
 export const NetworkNavigator = () => {
   const navigate = useNavigate();

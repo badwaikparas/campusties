@@ -30,7 +30,7 @@ export default function Navbar({ currentUser }) {
                     <img src={feedIcon} alt="" />
                     <p className='text-sm'>FEED</p>
                 </div>
-                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/network')} >
+                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/network/invitations')} >
                     <img src={networkIcon} alt="" />
                     <p className='text-sm'>NETWORK</p>
                 </div>

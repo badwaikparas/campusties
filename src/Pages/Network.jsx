@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Components/common/Navbar'
-import  { ConnectionTab, GroupTab, NetworkNavigator, NetworkUI } from '../Components/NetworkComponent'
+import  { ConnectionTab, GroupTab, NetworkNavigator, NetworkUI, PageTab } from '../Components/NetworkComponent'
 import { Outlet, Route, Routes } from 'react-router-dom'
 // import NetworkNavigator from '../Components/NetworkComponent'
 
@@ -16,7 +16,7 @@ const Network = () => {
                     <Route path="/invitations" element={<NetworkUI />} />
                     <Route path="/connections" element={<ConnectionTab />} />
                     <Route path="/groups" element={<GroupTab />} />
-                    <Route path="/pages" element={<NetworkUI />} />
+                    <Route path="/pages" element={<PageTab />} />
               </Routes>
             
 

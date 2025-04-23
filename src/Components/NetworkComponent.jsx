@@ -37,8 +37,6 @@ const RecievedTab = () => {
 
   return (
     <div >
-
-
       <h3 className='text-center text-gray-600 mb-4'>You have <span className='text-blue-500'>2 New Connections</span></h3>
 
       <ConnectionCard
@@ -108,7 +106,11 @@ export const NetworkNavigator = () => {
   const [activeSection, setActiveSection] = useState("invitations"); // Default to 'Invitations'
 
   useEffect(() => {
-    const path = location.pathname.split("/").pop(); // Get last part of URL
+    let path = location.pathname.split("/").pop(); // Get last part of URL
+    if(path == undefined || !path)path = location.pathname.split("/")[location.pathname.split("/").length-2];
+    console.log(path);
+    console.log(location.pathname.split("/"));
+    
     setActiveSection(path || "invitations"); // Default to "invitations" if no specific path
   }, [location.pathname]);
 
@@ -244,3 +246,31 @@ export const NetworkMain = () => {
 }
 
 
+export const PageCard = ({ name, followers, logo }) => {
+  return (
+    <div className="flex items-center justify-between p-4 border-gray-400 border-b-1 last:border-b-0">
+      <div className="flex items-center space-x-4">
+        <img src={logo} alt={`${name} logo`} className="w-10 h-10 rounded" />
+        <div>
+          <p className="font-medium">{name}</p>
+          <p className="text-sm text-gray-500">{followers} followers</p>
+        </div>
+      </div>
+      <button className="px-4 py-1 border rounded-full text-sm font-medium hover:bg-gray-100">
+        Following
+      </button>
+    </div>
+  );
+};
+
+export const PageTab = ()=>{
+  return(
+
+  <div className='bg-gray-100  p-5 overflow-auto max-h-[77vh] w-[55%]'>
+    <PageCard name='Fresher Jobs' followers='123' logo='https://cloudinary-marketing-res.cloudinary.com/image/upload/ar_0.5,c_fill,g_auto,w_433/q_auto/f_auto/hiking_dog_mountain.jpg' />
+    <PageCard name='Referalls' followers='792' logo='https://cloudinary-marketing-res.cloudinary.com/image/upload/w_1000/q_auto/f_auto/lake_wanaka_NZ.jpg' />
+
+
+  </div>
+  )
+}

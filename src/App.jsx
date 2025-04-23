@@ -7,6 +7,7 @@ import HomeLayout from './Layouts/HomeLayout'
 import Network from './Pages/Network'
 import ProfileLayout from './Layouts/ProfileLayout'
 import Chat from './Pages/Chat'
+import Jobs from './Pages/Jobs'
 import Navbar from './Components/common/Navbar'
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
                     <Route path="/home" element={<HomeLayout />} />
                     <Route path="/home/network" element={<Network />} />
                     <Route path="/home/profile" element={<ProfileLayout />} />
-                    <Route path="/chat" element={<Chat />} />
+                    <Route path="/home/chat" element={<Chat />} />
+                    <Route path="/home/jobs" element={<Jobs/>}/>
                 </Routes>
             </div>
         </Router>

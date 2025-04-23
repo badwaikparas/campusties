@@ -5,7 +5,7 @@ export default function ProfileAboutCard({ currentUser }) {
         <>
             <div className='flex flex-col h-auto'>
                 <h1 className='text-[18px]'>About</h1>
-                <p className='overflow-hidden bg-amber-200 h-auto line-clamp-2 text-[14px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim et dicta, delectus maiores, laborum nihil ut minima reiciendis quo eligendi, distinctio ratione ad. Eligendi, quidem. Molestiae officiis fugit expedita aspernatur.
+                <p className='overflow-hidden h-auto line-clamp-2 text-[14px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim et dicta, delectus maiores, laborum nihil ut minima reiciendis quo eligendi, distinctio ratione ad. Eligendi, quidem. Molestiae officiis fugit expedita aspernatur.
                     Incidunt magni aperiam pariatur libero saepe, vero harum temporibus totam omnis cum molestias dolor consectetur quas aspernatur vitae autem molestiae tenetur facere sit voluptatibus placeat nostrum culpa ducimus? Fuga, ea.
                     Adipisci accusantium commodi quibusdam officiis pariatur repellendus voluptate sunt error velit dignissimos, voluptas ab amet incidunt possimus inventore! Qui quidem magni quasi repudiandae perferendis consectetur quo provident, laboriosam vel optio.
                     Obcaecati sapiente, aut eos cumque culpa autem similique eum quas provident illo deserunt maxime officiis modi sit neque maiores ratione adipisci ducimus labore nostrum deleniti quam? Repudiandae architecto reiciendis vel.

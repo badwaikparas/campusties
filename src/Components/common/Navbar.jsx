@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom'
 
 import ProfilePopUp from './ProfilePopUp'
 
-export default function Navbar() {
+export default function Navbar({ currentUser }) {
     const [isPopUpopen, setIsPopUpOpen] = useState(false);
 
     const navigate = useNavigate()
@@ -70,7 +70,7 @@ export default function Navbar() {
                     }}>
                     <img src={profilePic} alt="" className='w-13 rounded-full' />
                     <div className=''>
-                        <p className='w-auto font-bold'>Paras Badwaik</p>
+                        <p className='w-auto font-bold'>{currentUser.name ? currentUser.name : "Paras Badwaik"}</p>
                         <div className='flex'>
                             <p>50367 views today </p>
                             <p className='text-green-400'>+32</p>
@@ -84,8 +84,6 @@ export default function Navbar() {
                     <ProfilePopUp closeFunc={() => { setIsPopUpOpen(false) }} />
                 }
             </div>
-
-
         </div>
     )
 }

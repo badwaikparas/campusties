@@ -1,16 +1,17 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import Home from '../Pages/Home'
+import React, { useState, useEffect } from 'react'
+import Profile from '../Pages/Profile'
 import Navbar from '../Components/common/Navbar'
 import { GetCurrentUser } from '../API/FireStoreAPI'
-export default function HomeLayout() {
+
+export default function ProfileLayout() {
     const [currentUser, setCurrentUser] = useState({})
     useEffect(() => {
         GetCurrentUser(setCurrentUser)
     }, [])
     return (
-        <div className='h-[1080px] overflow-y-auto'>
+        <div className=''>
             <Navbar currentUser={currentUser} />
-            <Home currentUser={currentUser} />
+            <Profile currentUser={currentUser} />
         </div>
     )
 }

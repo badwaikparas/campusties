@@ -13,11 +13,11 @@ function SkillsCard({ endorsement }) {
                 {/* // skill.endorsements.map((endorsement) => {
                     // return <img src={endorsement.imgUrl} alt="" key={endorsement.uuid}/>
                     // return */}
-                <img src={image} alt="" key={"hi"} className='rounded-full w-6' />
-                <img src={image} alt="" key={"hi"} className='rounded-full w-6 -ml-2' />
-                <img src={image} alt="" key={"hi"} className='rounded-full w-6 -ml-2' />
-                <img src={image} alt="" key={"hi"} className='rounded-full w-6 -ml-2' />
-                <img src={image} alt="" key={"hi"} className='rounded-full w-6 -ml-2' />
+                <img src={image} alt="" className='rounded-full w-6' />
+                <img src={image} alt="" className='rounded-full w-6 -ml-2' />
+                <img src={image} alt="" className='rounded-full w-6 -ml-2' />
+                <img src={image} alt="" className='rounded-full w-6 -ml-2' />
+                <img src={image} alt="" className='rounded-full w-6 -ml-2' />
                 {/* // }) */}
                 {/* } */}
             </div>

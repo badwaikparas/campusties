@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import Home from '../Pages/Home'
+import React, { useState, useEffect } from 'react'
 import { GetCurrentUser } from '../API/FireStoreAPI'
 import Navbar from '../Components/common/Navbar'
+import Chat from '../Pages/Chat'
 
-export default function HomeLayout() {
+function ChatLayout() {
     const [currentUser, setCurrentUser] = useState({})
     useEffect(() => {
         GetCurrentUser(setCurrentUser)
@@ -11,7 +11,9 @@ export default function HomeLayout() {
     return (
         <div>
             <Navbar currentUser={currentUser} />
-            <Home currentUser={currentUser} />
+            <Chat />
         </div>
     )
 }
+
+export default ChatLayout

@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from 'react'
 import Jobs from '../Pages/Jobs'
 import Navbar from '../Components/common/Navbar'
 import { GetCurrentUser } from '../API/FireStoreAPI'
-import Jobs from '../Pages/Jobs'
 export default function JobsLayout() {
     const [currentUser, setCurrentUser] = useState({})
     useEffect(() => {
@@ -10,7 +9,7 @@ export default function JobsLayout() {
     }, [])
     return (
         <div>
-            <Navbar />
+            <Navbar currentUser={currentUser} />
             <Jobs currentUser={currentUser} />
         </div>
     )

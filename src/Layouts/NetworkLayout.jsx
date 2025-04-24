@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import Home from '../Pages/Home'
-import { GetCurrentUser } from '../API/FireStoreAPI'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../Components/common/Navbar'
+import Network from '../Pages/Network'
+import { GetCurrentUser } from '../API/FireStoreAPI'
 
-export default function HomeLayout() {
+function NetworkLayout() {
     const [currentUser, setCurrentUser] = useState({})
     useEffect(() => {
         GetCurrentUser(setCurrentUser)
@@ -11,7 +11,9 @@ export default function HomeLayout() {
     return (
         <div>
             <Navbar currentUser={currentUser} />
-            <Home currentUser={currentUser} />
+            <Network />
         </div>
     )
 }
+
+export default NetworkLayout

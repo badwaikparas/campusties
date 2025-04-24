@@ -7,7 +7,7 @@ import chatIcon from '../../Assets/NavbarIcons/message-square.svg'
 import notificationIcon from '../../Assets/NavbarIcons/bell.svg'
 import searchIcon from '../../Assets/NavbarIcons/search.svg'
 import progressIcon from '../../Assets/NavbarIcons/progress.svg'
-// import profilePic from '../../Assets/ProfilePic/DSCN1525.JPG'
+import profilePic from '../../Assets/ProfilePic/DSCN1525.JPG'
 import { useNavigate } from 'react-router-dom'
 
 import ProfilePopUp from './ProfilePopUp'
@@ -30,19 +30,19 @@ export default function Navbar({ currentUser }) {
                     <img src={feedIcon} alt="" />
                     <p className='text-sm'>FEED</p>
                 </div>
-                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/network/invitations')} >
+                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/home/network')} >
                     <img src={networkIcon} alt="" />
                     <p className='text-sm'>NETWORK</p>
                 </div>
-                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/jobs')} >
+                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/home/jobs')} >
                     <img src={jobsIcon} alt="" />
                     <p className='text-sm'>JOBS</p>
                 </div>
-                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/chat')} >
+                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/home/chat')} >
                     <img src={chatIcon} alt="" />
                     <p className='text-sm'>CHAT</p>
                 </div>
-                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/notify')} >
+                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/home/notify')} >
                     <img src={notificationIcon} alt="" />
                     <p className='text-sm'>NOTIFY</p>
                 </div>
@@ -68,7 +68,7 @@ export default function Navbar({ currentUser }) {
 
 
                     }}>
-                    {/* <img src={profilePic} alt="" className='w-13 rounded-full' /> */}
+                    <img src={profilePic} alt="" className='w-13 rounded-full' />
                     <div className=''>
                         <p className='w-auto font-bold'>{currentUser.name ? currentUser.name : "Paras Badwaik"}</p>
                         <div className='flex'>

@@ -25,24 +25,24 @@ export default function Navbar({ currentUser }) {
             <img src={campustiesLogo} alt="" className='w-[55px] ml-[20px]' />
 
             {/* NAVBAR ICONS */}
-            <div className='w-full flex items-center'>
-                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/home')} >
+            <div className='w-full flex items-center ml-8'>
+                <div className='m-4 flex flex-col justify-center items-center cursor-pointer' onClick={() => gotoRoute('/home')} >
                     <img src={feedIcon} alt="" />
                     <p className='text-sm'>FEED</p>
                 </div>
-                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/home/network')} >
+                <div className='m-4 flex flex-col justify-center items-center cursor-pointer' onClick={() => gotoRoute('/home/network')} >
                     <img src={networkIcon} alt="" />
                     <p className='text-sm'>NETWORK</p>
                 </div>
-                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/home/jobs')} >
+                <div className='m-4 flex flex-col justify-center items-center cursor-pointer' onClick={() => gotoRoute('/home/jobs')} >
                     <img src={jobsIcon} alt="" />
                     <p className='text-sm'>JOBS</p>
                 </div>
-                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/home/chat')} >
+                <div className='m-4 flex flex-col justify-center items-center cursor-pointer' onClick={() => gotoRoute('/home/chat')} >
                     <img src={chatIcon} alt="" />
                     <p className='text-sm'>CHAT</p>
                 </div>
-                <div className='m-4 flex flex-col justify-center items-center ' onClick={() => gotoRoute('/home/notify')} >
+                <div className='m-4 flex flex-col justify-center items-center cursor-pointer' onClick={() => gotoRoute('/home/notify')} >
                     <img src={notificationIcon} alt="" />
                     <p className='text-sm'>NOTIFY</p>
                 </div>
@@ -50,7 +50,7 @@ export default function Navbar({ currentUser }) {
 
             {/* SEARCH */}
 
-            <div className='relative' >
+            <div className='relative mx-8' >
                 <img src={searchIcon} alt="" className='absolute top-1/2 -translate-y-1/2 ml-4' />
                 <input placeholder='Search' type="text" className='p-4 pl-11 focus:border-2 border-gray-500 rounded-3xl' />
             </div>
@@ -68,7 +68,7 @@ export default function Navbar({ currentUser }) {
 
 
                     }}>
-                    <img src={profilePic} alt="" className='w-13 rounded-full' />
+                    <img src={profilePic} alt="" className='w-13 h-13 object-cover rounded-full' />
                     <div className=''>
                         <p className='w-auto font-bold'>{currentUser.name ? currentUser.name : "Paras Badwaik"}</p>
                         <div className='flex'>

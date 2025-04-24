@@ -1,4 +1,4 @@
 node_modules
-.gitignore
-DSCN1525.JPG
 package-lock.json
+src/Assets/ProjectPhoto/DSCN1525.JPG
+.gitignore

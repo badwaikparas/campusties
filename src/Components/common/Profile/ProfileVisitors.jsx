@@ -9,8 +9,8 @@ function ProfileVisitors() {
                 <p className='text-[14px] text-blue-400'>VIEW ALL</p>
             </div>
             <div>
-                <ProfileVisitorsCard name={"Paras Badwaik 213141231231212313123"} description={"Freelance UI/UX aAAAAAAAAAAAAAAAA"} />
-                <ProfileVisitorsCard name={"Paras Badwaik 213141231231212313123"} description={"Freelance UI/UX aAAAAAAAAAAAAAAAA"} />
+                <ProfileVisitorsCard name={"Stacy Lang"} description={"Freelance UI/UX"} />
+                <ProfileVisitorsCard name={"Stacy Lang"} description={"Freelance UI/UX"} />
             </div>
         </div>
     )

@@ -10,7 +10,7 @@ function BlogsCard({ title, description }) {
                     {title}
                 </h1>
                 <span className="text-[14px] text-slate-500 overflow-hidden overflow-ellipsis whitespace-nowrap">
-                    {description}dasdasdassdassdasdasdasdasdasdasdasdasdas
+                    {description}
                 </span>
             </div>
         </div>

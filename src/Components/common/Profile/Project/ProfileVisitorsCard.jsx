@@ -9,7 +9,7 @@ function ProfileVisitorsCard({ name, description }) {
                 <div>
                     <p className="overflow-hidden h-auto line-clamp-1 font-bold">{name}</p>
                     <div className="flex">
-                        <p className="overflow-hidden h-auto line-clamp-1 text-[14px]">{description}aassasdasdasdasa</p>
+                        <p className="overflow-hidden h-auto line-clamp-1 text-[14px]">{description}</p>
                     </div>
                 </div>
             </div>

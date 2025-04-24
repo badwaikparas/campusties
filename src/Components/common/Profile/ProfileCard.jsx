@@ -30,8 +30,8 @@ export default function ProfileCard({ currentUser }) {
 
             {/* User Image and Job Description */}
             <div className='flex'>
-                <div className='rounded-full p-4 w-86 bg-white relative -top-16'>
-                    <img src={ProfilePic} alt="" className='rounded-full' />
+                <div className='rounded-full border-16 border-white bg-white relative -top-16'>
+                    <img src={ProfilePic} alt="" className='rounded-full w-80 h-80 object-cover' />
                 </div>
                 <div className='p-7 flex-1'>
                     <div className='flex flex-col justify-between items-start'>

@@ -6,7 +6,7 @@ function ProfileBlogs() {
         <>
             <div>Blogs</div>
             <div className='mt-4'>
-                <BlogsCard title={"Random  Title"} description={"ransodsfsfsdfdf"} />
+                <BlogsCard title={"Blog  Title"} description={"Blog description"} />
             </div>
         </>
     )

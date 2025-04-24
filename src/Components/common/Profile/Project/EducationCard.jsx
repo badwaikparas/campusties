@@ -5,7 +5,7 @@ function EducationCard() {
     return (
         <div>
             <div className='flex justify-start items-start gap-3 p-4 rounded-md'>
-                <img src={logo} alt="" className='rounded-full w-[54px]' />
+                <img src={logo} alt="" className='rounded-full w-[54px] h-[54px] object-cover' />
                 <div>
                     <h1 className='text-[16px] mb-2'> Freelance UX/UI designer</h1>
                     <div className='mb-4'>Bachelor&apos;s degree Field Of StudyComputer and Information Systems Security/Information Assurance</div>

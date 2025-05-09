@@ -16,7 +16,7 @@ export default function Login() {
                 localStorage.setItem('userEmail', res.email)
                 setTimeout(() => {
                     navigate('/home')
-                }, 5000)
+                }, 1000)
             } else {
                 setCanAccess(false)
                 // alert('Please Login to continue')

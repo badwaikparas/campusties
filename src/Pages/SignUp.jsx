@@ -13,7 +13,7 @@ export default function SignUp() {
                 localStorage.setItem('userEmail', res.email)
                 setTimeout(() => {
                     navigate('/home')
-                }, 5000)
+                }, 1000)
             } else {
                 setCanAccess(false)
                 // console.log(res?.accessToken);

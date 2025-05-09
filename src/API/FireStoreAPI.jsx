@@ -1,6 +1,5 @@
 import { firestore } from "../firebaseConfig.js"
 import { addDoc, collection, onSnapshot } from "firebase/firestore"
-import { getCurrentTimeStamp } from '../Helpers/useMoment';
 
 let postRef = collection(firestore, "posts")
 let userRef = collection(firestore, "users")
@@ -46,14 +45,5 @@ export const GetCurrentUser = (setCurrentUser) => {
                     return item.email === currEmail;
                 })[0]
         )
-
-        console.log(response.docs
-            .map((docs) => {
-                return { ...docs.data(), userId: docs.id }
-            })
-            .filter((item) => {
-                return item.email === currEmail;
-            }));
-
     })
 }

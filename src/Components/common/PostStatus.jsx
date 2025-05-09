@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ModalComponent from './ModalComponent'
 import { PostStatusFunction, GetPostsFunction } from '../../API/FireStoreAPI';
-import { getCurrentTimeStamp } from '../../Helpers/useMoment';
+import { getCurrentTimeStamp, getDateObjectFromMoment } from '../../Helpers/useMoment';
 import { getUniqueID } from '../../Helpers/getUniqueId';
 import PostCard from './PostCard';
 export default function PostStatus({ currentUser }) {
@@ -42,11 +42,18 @@ export default function PostStatus({ currentUser }) {
 
             {/* LODING ALL THE POSTS */}
             <div className='flex flex-col justify-center items-center'>
-                {allPosts.map((post) => {
-                    return (
-                        <PostCard post={post} key={post.id} />
-                    )
-                })}
+                {allPosts
+                    .sort((a, b) => {
+                        const dateA = getDateObjectFromMoment(a.timeStamp);
+                        const dateB = getDateObjectFromMoment(b.timeStamp);
+                        // console.log("a.timeStamp:", a.timeStamp);
+                        // console.log("b.timeStamp:", b.timeStamp);
+                        return dateB - dateA;
+                    })
+                    .map((post) => {
+                        return <PostCard post={post} key={post.id} />;
+                    })
+                }
             </div>
         </div>
     )

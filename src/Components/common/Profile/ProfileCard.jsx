@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProfilePic from '../../../Assets/ProfilePic/DSCN1525.JPG'
 import bellIcon from '../../../Assets/NavbarIcons/bell.svg'
+import { Modal } from 'antd';
+import UploadImageModalComponent from '../UploadImageModalComponent';
+import { uploadImage } from '../../../Helpers/uploadImage';
 
 export default function ProfileCard({ currentUser }) {
+    const [modalOpen, setModalOpen] = useState(false);
     return (
         <div>
+            <UploadImageModalComponent modalOpen={modalOpen} setModalOpen={setModalOpen} />
             {/* Background  */}
             <div className='h-[400px] bg-cover bg-center p-8'
                 style={{
@@ -16,7 +21,7 @@ export default function ProfileCard({ currentUser }) {
                         <img src={bellIcon} alt="upload" />
                     </div>
                     <div className='flex w-auto gap-8'>
-                        <div className='bg-white rounded-sm flex p-2 gap-2'>
+                        <div className='bg-white rounded-sm flex p-2 gap-2' onClick={() => setModalOpen((c) => !c)}>
                             <img src={bellIcon} alt="edit profile" />
                             <p>Edit Profile</p>
                         </div>

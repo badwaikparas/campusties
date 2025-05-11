@@ -118,7 +118,7 @@ const JobsComponent = () => {
                             </div>
                         ))
                     ) : (
-                        <div className='ml-28 mt-8 text-gray-500'>No jobs found for "{searchQuery}"</div>
+                        <div className='ml-28 mt-8 text-gray-500'>No jobs found for {searchQuery}</div>
                     )}
                 </div>
             </div>

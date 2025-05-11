@@ -9,11 +9,11 @@ export default function ProfileCard({ currentUser }) {
     const [modalOpen, setModalOpen] = useState(false);
     return (
         <div>
-            <UploadImageModalComponent modalOpen={modalOpen} setModalOpen={setModalOpen} />
+            <UploadImageModalComponent modalOpen={modalOpen} setModalOpen={setModalOpen} currentUser={currentUser} />
             {/* Background  */}
             <div className='h-[400px] bg-cover bg-center p-8'
                 style={{
-                    backgroundImage: `url(${ProfilePic})`
+                    backgroundImage: `url(${currentUser.profileCoverPictureUrl ? currentUser.profileCoverPictureUrl : ProfilePic})`
                 }}
             >
                 <div className='flex justify-between'>
@@ -36,7 +36,7 @@ export default function ProfileCard({ currentUser }) {
             {/* User Image and Job Description */}
             <div className='flex'>
                 <div className='rounded-full border-16 border-white bg-white relative -top-16'>
-                    <img src={ProfilePic} alt="" className='rounded-full w-80 h-80 object-cover' />
+                    <img src={currentUser.profilePictureUrl ? currentUser.profilePictureUrl : ProfilePic} alt="" className='rounded-full w-80 h-80 object-cover' />
                 </div>
                 <div className='p-7 flex-1'>
                     <div className='flex flex-col justify-between items-start'>

@@ -68,7 +68,10 @@ export default function Navbar({ currentUser }) {
 
 
                     }}>
-                    <img src={profilePic} alt="" className='w-13 h-13 object-cover rounded-full' />
+                    {currentUser.profilePictureUrl ?
+                        <img src={currentUser.profilePictureUrl} alt="" className='w-13 h-13 object-cover rounded-full' /> :
+                        <img src={profilePic} alt="" className='w-13 h-13 object-cover rounded-full' />
+                    }
                     <div className=''>
                         <p className='w-auto font-bold'>{currentUser.name ? currentUser.name : "Paras Badwaik"}</p>
                         <div className='flex'>

@@ -12,7 +12,22 @@ export default function SignUpComponent() {
         try {
             let res = await SignUpAPI(email, password)
             console.log(res);
-            PostUserData({ name, email })
+            PostUserData({
+                name,
+                email,
+                userProfileImageUrl: "",
+                userProfileImageDeleteUrl: "",
+                userProfileCoverImageUrl: "",
+                userProfileCoverImageDeleteUrl: "",
+                connections: 0,
+                about: "",
+                project: [],
+                skills: [],
+                experience: [],
+                education: [],
+                viewers: [],
+
+            })
             localStorage.setItem('userEmail', res.email)
             navigate("/home")
         } catch (error) {

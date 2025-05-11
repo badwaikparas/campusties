@@ -25,7 +25,6 @@ export default function ProfileComponent({ currentUser }) {
                         <ProfileAboutCard />
                     </Card>
 
-
                     {/* Projects Section */}
                     <Card paddingX={30} paddingY={30}>
                         <ProfileProject />

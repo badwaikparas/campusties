@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectImg from '../../../Assets/ProjectPhoto/ext.png'
-import ProjectCard from './Project/ProjectCard'
+import ProjectCard from './Components/ProjectCard'
 
 function ProfileProject() {
     return (

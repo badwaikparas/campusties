@@ -1,5 +1,5 @@
 import React from 'react'
-import ProfileVisitorsCard from './Project/ProfileVisitorsCard'
+import ProfileVisitorsCard from './Components/ProfileVisitorsCard'
 
 function ProfileVisitors() {
     return (

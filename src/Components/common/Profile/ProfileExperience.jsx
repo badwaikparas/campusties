@@ -1,5 +1,5 @@
 import React from 'react'
-import ExperienceCard from './Project/ExperienceCard'
+import ExperienceCard from './Components/ExperienceCard'
 
 function ProfileExperience() {
     return (

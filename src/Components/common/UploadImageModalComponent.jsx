@@ -94,7 +94,7 @@ const App = ({ currentUser }) => {
                     action="http://localhost:3000/upload"
                     onChange={(info) => handleChange(info, 'dp')} // for display photo
                 >
-                    {currentUser.profilePictureUrl ? <img src={currentUser.profilePictureUrl} alt="avatar" className='rounded-full object-fill w-full h-full' /> : uploadButton}
+                    {currentUser.profilePictureUrl ? <img src={currentUser.profilePictureUrl} alt="avatar" className='rounded-full object-cover w-full h-full' /> : uploadButton}
                 </Upload>
                 <p>Profile Photo</p>
             </div>
@@ -107,7 +107,7 @@ const App = ({ currentUser }) => {
                     action="http://localhost:3000/upload"
                     onChange={(info) => handleChange(info, 'cp')} // for cover photo
                 >
-                    {currentUser.profileCoverPictureUrl ? <img src={currentUser.profileCoverPictureUrl} alt="avatar" className='rounded-full object-fill w-full h-full' /> : uploadButton}
+                    {currentUser.profileCoverPictureUrl ? <img src={currentUser.profileCoverPictureUrl} alt="avatar" className='rounded-full object-cover w-full h-full' /> : uploadButton}
                 </Upload>
                 <p>Cover Photo</p>
             </div>

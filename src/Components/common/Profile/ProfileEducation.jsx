@@ -1,5 +1,5 @@
 import React from 'react'
-import EducationCard from './Project/EducationCard'
+import EducationCard from './Components/EducationCard'
 
 function ProfileEducation() {
     return (

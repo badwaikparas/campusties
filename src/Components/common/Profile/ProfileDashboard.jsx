@@ -1,5 +1,5 @@
 import React from 'react'
-import DashboardCard from './Project/DashboardCard'
+import DashboardCard from './Components/DashboardCard'
 
 function ProfileDashboard() {
     return (

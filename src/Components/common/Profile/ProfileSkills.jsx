@@ -1,5 +1,5 @@
 import React from 'react'
-import SkillsCard from './Project/SkillsCard'
+import SkillsCard from './Components/SkillsCard'
 
 function ProfileSkills({ skills }) {
     return (

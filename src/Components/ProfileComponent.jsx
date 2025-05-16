@@ -17,7 +17,7 @@ export default function ProfileComponent({ currentUser }) {
         <div className='flex justify-center'>
             <div className='flex justify-center items-start overflow-y-auto gap-8 p-4 w-3/4'>
                 {/* Left */}
-                <div className='w-full'>
+                <div className='flex flex-col gap-6 w-full '>
                     <Card paddingX={0} paddingY={0}>
                         <ProfileCard currentUser={currentUser} />
                     </Card>
@@ -42,7 +42,7 @@ export default function ProfileComponent({ currentUser }) {
                     </Card>
                 </div>
                 {/* Right */}
-                <div className='w-[400px]  '>
+                <div className='flex flex-col gap-6 w-[400px]'>
                     <Card paddingX={30} paddingY={30}>
                         <ProfileDashboard />
                     </Card>

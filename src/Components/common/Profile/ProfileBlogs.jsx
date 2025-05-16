@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogsCard from './Project/BlogsCard'
+import BlogsCard from './Components/BlogsCard'
 
 function ProfileBlogs() {
     return (

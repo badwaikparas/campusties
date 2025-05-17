@@ -6,7 +6,6 @@ export default function HomeComponent({ currentUser }) {
         <div className='flex justify-evenly items-start  overflow-y-scroll'>
             <FeedLeftSection />
             <PostStatus currentUser={currentUser} />
-            
         </div>
     )
 }

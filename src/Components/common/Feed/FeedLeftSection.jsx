@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Card from '../Card'
 import bellIcon from '../../../Assets/NavbarIcons/bell.svg'
 import HypeTrainBar from './HypeTrainBar';
+import Calendar from '../CalenderComponent';
 
 function FeedLeftSection() {
     const [events, seetEvents] = useState([
@@ -51,6 +52,13 @@ function FeedLeftSection() {
                         })
                     }
                 </div>
+            </Card>
+
+            <Card>
+                <Calendar events={[
+                    { date: '2025-05-20', title: 'Team Meeting', level: '2' },
+                    { date: '2025-05-25', title: 'Workshop on AI', level: '3' }
+                ]} />
             </Card>
         </div>
     )

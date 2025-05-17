@@ -22,7 +22,7 @@ function FeedLeftSection() {
         //  get events
     }, [])
     return (
-        <div className='mt-[30px] w-[27%] max-w-max[] flex flex-col gap-[30px]'>
+        <div className='mt-[30px] min-w-fit max-w-max[] flex flex-col gap-[30px]'>
             <Card paddingX={20} paddingY={20}>
                 <div className='text-[22px] font-bold'>
                     <div>Upcoming Seminars</div>
